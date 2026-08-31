@@ -1,0 +1,808 @@
+/* ==================================================
+   ADMIN REPLIES PAGE
+================================================== */
+
+
+/* --------------------------------------------------
+   MAIN CONTAINER
+-------------------------------------------------- */
+
+.admin-replies-container {
+
+    width: 92%;
+
+    max-width: 1200px;
+
+    margin: 45px auto;
+
+}
+
+
+/* ==================================================
+   PAGE HEADER
+================================================== */
+
+.page-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+
+}
+
+
+.page-header h1 {
+
+    margin: 0 0 7px;
+
+    font-size: 30px;
+
+    color: #222;
+
+}
+
+
+.page-header p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 15px;
+
+}
+
+
+/* ==================================================
+   ALERTS
+================================================== */
+
+.alert {
+
+    padding: 14px 18px;
+
+    margin-bottom: 25px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+}
+
+
+.success-alert {
+
+    background: #e8f5e9;
+
+    color: #2e7d32;
+
+    border-left: 4px solid #2e7d32;
+
+}
+
+
+.error-alert {
+
+    background: #ffebee;
+
+    color: #c62828;
+
+    border-left: 4px solid #c62828;
+
+}
+
+
+/* ==================================================
+   MESSAGES CARD
+================================================== */
+
+.messages-card {
+
+    width: 100%;
+
+}
+
+
+.messages-list {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+}
+
+
+/* ==================================================
+   SINGLE MESSAGE CARD
+================================================== */
+
+.message-card {
+
+    background: #ffffff;
+
+    border: 1px solid #e5e5e5;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.07);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.message-card:hover {
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 24px rgba(0, 0, 0, 0.10);
+
+}
+
+
+/* ==================================================
+   MESSAGE HEADER
+================================================== */
+
+.message-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding-bottom: 18px;
+
+    border-bottom: 1px solid #eeeeee;
+
+}
+
+
+.message-number {
+
+    display: inline-block;
+
+    margin-bottom: 7px;
+
+    color: #2e7d32;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+}
+
+
+.message-header h2 {
+
+    margin: 0;
+
+    color: #222;
+
+    font-size: 20px;
+
+    word-break: break-word;
+
+}
+
+
+.message-date {
+
+    white-space: nowrap;
+
+    color: #777;
+
+    font-size: 13px;
+
+}
+
+
+/* ==================================================
+   SENDER INFORMATION
+================================================== */
+
+.sender-info {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 35px;
+
+    padding: 18px 0;
+
+}
+
+
+.sender-item {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+}
+
+
+.sender-label {
+
+    color: #888;
+
+    font-size: 12px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.sender-item strong {
+
+    color: #333;
+
+    font-size: 14px;
+
+    word-break: break-word;
+
+}
+
+
+/* ==================================================
+   CONTENT TITLE
+================================================== */
+
+.content-title {
+
+    margin-bottom: 10px;
+
+    color: #2e7d32;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+}
+
+
+/* ==================================================
+   USER MESSAGE
+================================================== */
+
+.user-message {
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+
+    background: #f8f9f8;
+
+    border-radius: 9px;
+
+    border-left: 4px solid #2e7d32;
+
+}
+
+
+.user-message p {
+
+    margin: 0;
+
+    color: #444;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    word-break: break-word;
+
+}
+
+
+/* ==================================================
+   EXISTING REPLY
+================================================== */
+
+.existing-reply {
+
+    padding: 18px;
+
+    margin-bottom: 20px;
+
+    background: #eef7ee;
+
+    border-radius: 9px;
+
+    border-left: 4px solid #2e7d32;
+
+}
+
+
+.existing-reply .content-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+}
+
+
+.existing-reply p {
+
+    margin: 0;
+
+    color: #444;
+
+    line-height: 1.7;
+
+    font-size: 14px;
+
+    word-break: break-word;
+
+}
+
+
+/* ==================================================
+   REPLY SECTION
+================================================== */
+
+.reply-section {
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eeeeee;
+
+}
+
+
+.reply-section h3 {
+
+    margin: 0 0 5px;
+
+    color: #222;
+
+    font-size: 18px;
+
+}
+
+
+.reply-description {
+
+    margin: 0 0 15px;
+
+    color: #888;
+
+    font-size: 13px;
+
+}
+
+
+/* ==================================================
+   REPLY FORM
+================================================== */
+
+.reply-form {
+
+    width: 100%;
+
+}
+
+
+.reply-form textarea {
+
+    display: block;
+
+    width: 100%;
+
+    min-height: 120px;
+
+    box-sizing: border-box;
+
+    padding: 14px;
+
+    resize: vertical;
+
+    border: 1px solid #d7d7d7;
+
+    border-radius: 8px;
+
+    outline: none;
+
+    background: #ffffff;
+
+    color: #333;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.reply-form textarea:focus {
+
+    border-color: #2e7d32;
+
+    box-shadow:
+        0 0 0 3px rgba(46, 125, 50, 0.10);
+
+}
+
+
+.reply-form textarea::placeholder {
+
+    color: #999;
+
+}
+
+
+/* ==================================================
+   REPLY FORM FOOTER
+================================================== */
+
+.reply-form-footer {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 12px;
+
+}
+
+
+.character-limit {
+
+    color: #888;
+
+    font-size: 12px;
+
+}
+
+
+/* ==================================================
+   SEND REPLY BUTTON
+================================================== */
+
+.send-reply-btn {
+
+    padding: 11px 20px;
+
+    border: none;
+
+    border-radius: 7px;
+
+    background: #2e7d32;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+
+}
+
+
+.send-reply-btn:hover {
+
+    background: #256628;
+
+    transform: translateY(-1px);
+
+}
+
+
+.send-reply-btn:active {
+
+    transform: translateY(0);
+
+}
+
+
+/* ==================================================
+   EMPTY STATE
+================================================== */
+
+.empty-state {
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+    background: #ffffff;
+
+    border: 1px solid #eeeeee;
+
+    border-radius: 14px;
+
+}
+
+
+.empty-icon {
+
+    margin-bottom: 15px;
+
+    font-size: 50px;
+
+}
+
+
+.empty-state h2 {
+
+    margin: 0 0 8px;
+
+    color: #333;
+
+    font-size: 22px;
+
+}
+
+
+.empty-state p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    margin-top: 50px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #222;
+
+    color: #ffffff;
+
+}
+
+
+footer p {
+
+    margin: 0;
+
+    font-size: 14px;
+
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 768px) {
+
+
+    .admin-replies-container {
+
+        width: 94%;
+
+        margin: 30px auto;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 25px;
+
+    }
+
+
+    .message-card {
+
+        padding: 20px;
+
+    }
+
+
+    .message-header {
+
+        flex-direction: column;
+
+        gap: 8px;
+
+    }
+
+
+    .message-date {
+
+        white-space: normal;
+
+    }
+
+
+    .sender-info {
+
+        gap: 20px;
+
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 550px) {
+
+
+    .admin-replies-container {
+
+        width: 94%;
+
+        margin: 25px auto;
+
+    }
+
+
+    .page-header {
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .page-header h1 {
+
+        font-size: 22px;
+
+    }
+
+
+    .page-header p {
+
+        font-size: 13px;
+
+    }
+
+
+    .message-card {
+
+        padding: 17px;
+
+        border-radius: 10px;
+
+    }
+
+
+    .message-header h2 {
+
+        font-size: 17px;
+
+    }
+
+
+    .message-number {
+
+        font-size: 12px;
+
+    }
+
+
+    .sender-info {
+
+        flex-direction: column;
+
+        gap: 14px;
+
+    }
+
+
+    .user-message {
+
+        padding: 14px;
+
+    }
+
+
+    .existing-reply {
+
+        padding: 14px;
+
+    }
+
+
+    .reply-section {
+
+        padding-top: 17px;
+
+    }
+
+
+    .reply-section h3 {
+
+        font-size: 16px;
+
+    }
+
+
+    .reply-form textarea {
+
+        min-height: 110px;
+
+        font-size: 13px;
+
+    }
+
+
+    .reply-form-footer {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+    }
+
+
+    .character-limit {
+
+        text-align: left;
+
+    }
+
+
+    .send-reply-btn {
+
+        width: 100%;
+
+        padding: 12px;
+
+    }
+
+
+    .empty-state {
+
+        padding: 60px 15px;
+
+    }
+
+}

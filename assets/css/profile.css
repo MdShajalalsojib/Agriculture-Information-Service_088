@@ -1,0 +1,768 @@
+/* ==================================================
+   PROFILE PAGE
+================================================== */
+
+
+/* --------------------------------------------------
+   Profile Container
+-------------------------------------------------- */
+
+.profile-container {
+    width: 92%;
+    max-width: 1250px;
+    margin: 50px auto;
+}
+
+
+/* --------------------------------------------------
+   Profile Card
+-------------------------------------------------- */
+
+.profile-card {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px;
+
+    margin-bottom: 35px;
+
+    background: #ffffff;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #eeeeee;
+}
+
+
+/* --------------------------------------------------
+   Profile Avatar
+-------------------------------------------------- */
+
+.profile-avatar {
+    width: 85px;
+    height: 85px;
+
+    min-width: 85px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #2e7d32;
+
+    color: #ffffff;
+
+    font-size: 36px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+}
+
+
+/* --------------------------------------------------
+   Profile Information
+-------------------------------------------------- */
+
+.profile-info h1 {
+    margin: 0 0 15px;
+
+    font-size: 28px;
+
+    color: #222222;
+}
+
+
+.profile-info p {
+    margin: 7px 0;
+
+    color: #555555;
+
+    font-size: 15px;
+}
+
+
+.profile-info strong {
+    color: #222222;
+}
+
+
+/* ==================================================
+   MESSAGES SECTION
+================================================== */
+
+.messages-section {
+    background: #ffffff;
+
+    padding: 30px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.08);
+
+    border: 1px solid #eeeeee;
+}
+
+
+/* --------------------------------------------------
+   Section Header
+-------------------------------------------------- */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+.section-header h2 {
+    margin: 0 0 6px;
+
+    font-size: 25px;
+
+    color: #222222;
+}
+
+
+.section-header p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   TABLE
+================================================== */
+
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+.messages-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 850px;
+}
+
+
+/* --------------------------------------------------
+   Table Header
+-------------------------------------------------- */
+
+.messages-table thead {
+    background: #2e7d32;
+}
+
+
+.messages-table th {
+    padding: 15px 14px;
+
+    text-align: left;
+
+    color: #ffffff;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* --------------------------------------------------
+   Table Body
+-------------------------------------------------- */
+
+.messages-table td {
+    padding: 17px 14px;
+
+    border-bottom: 1px solid #eeeeee;
+
+    vertical-align: top;
+
+    font-size: 14px;
+
+    color: #444444;
+}
+
+
+.messages-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+
+.messages-table tbody tr:hover {
+    background: #f8fbf8;
+}
+
+
+/* --------------------------------------------------
+   Message ID
+-------------------------------------------------- */
+
+.message-id {
+    font-weight: 700;
+
+    color: #2e7d32 !important;
+
+    white-space: nowrap;
+}
+
+
+/* --------------------------------------------------
+   Subject
+-------------------------------------------------- */
+
+.message-subject {
+    font-weight: 600;
+
+    color: #333333;
+}
+
+
+/* --------------------------------------------------
+   Message Column
+-------------------------------------------------- */
+
+.message-column {
+    max-width: 350px;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+/* --------------------------------------------------
+   Date
+-------------------------------------------------- */
+
+.date-column {
+    white-space: nowrap;
+
+    color: #666666 !important;
+
+    font-size: 13px !important;
+}
+
+
+/* ==================================================
+   REPLY BUTTON
+================================================== */
+
+.reply-btn {
+    border: none;
+
+    padding: 9px 15px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* --------------------------------------------------
+   Replied Button
+-------------------------------------------------- */
+
+.reply-btn.replied {
+    background: #2e7d32;
+
+    color: #ffffff;
+}
+
+
+.reply-btn.replied:hover {
+    background: #256628;
+
+    transform: translateY(-1px);
+}
+
+
+/* --------------------------------------------------
+   No Reply Button
+-------------------------------------------------- */
+
+.reply-btn.no-reply {
+    background: #eeeeee;
+
+    color: #555555;
+}
+
+
+.reply-btn.no-reply:hover {
+    background: #dddddd;
+
+    transform: translateY(-1px);
+}
+
+
+/* ==================================================
+   REPLY BOX
+================================================== */
+
+.reply-box {
+    display: none;
+
+    margin-top: 12px;
+
+    padding: 15px;
+
+    width: 280px;
+
+    max-width: 100%;
+
+    background: #f5faf5;
+
+    border-left: 4px solid #2e7d32;
+
+    border-radius: 8px;
+
+    animation: replyOpen 0.2s ease;
+}
+
+
+/* --------------------------------------------------
+   Show Reply
+-------------------------------------------------- */
+
+.reply-box.show {
+    display: block;
+}
+
+
+/* --------------------------------------------------
+   Reply Animation
+-------------------------------------------------- */
+
+@keyframes replyOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* --------------------------------------------------
+   Reply Title
+-------------------------------------------------- */
+
+.reply-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-bottom: 8px;
+
+    color: #2e7d32;
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* --------------------------------------------------
+   Reply Icon
+-------------------------------------------------- */
+
+.reply-icon {
+    font-size: 16px;
+}
+
+
+/* --------------------------------------------------
+   Reply Text
+-------------------------------------------------- */
+
+.reply-box p {
+    margin: 0;
+
+    color: #444444;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    word-break: break-word;
+}
+
+
+/* --------------------------------------------------
+   No Reply Box
+-------------------------------------------------- */
+
+.no-reply-box {
+    background: #fafafa;
+
+    border-left-color: #999999;
+}
+
+
+.no-reply-box .reply-title {
+    color: #666666;
+}
+
+
+.waiting-message {
+    color: #777777 !important;
+
+    font-style: italic;
+}
+
+
+/* ==================================================
+   EMPTY STATE
+================================================== */
+
+.no-messages {
+    padding: 0 !important;
+}
+
+
+.empty-state {
+    padding: 60px 20px;
+
+    text-align: center;
+}
+
+
+.empty-icon {
+    font-size: 45px;
+
+    margin-bottom: 15px;
+}
+
+
+.empty-state h3 {
+    margin: 0 0 8px;
+
+    color: #333333;
+
+    font-size: 20px;
+}
+
+
+.empty-state p {
+    margin: 0;
+
+    color: #777777;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+    margin-top: 50px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #222222;
+
+    color: #ffffff;
+}
+
+
+footer p {
+    margin: 0;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   RESPONSIVE DESIGN
+================================================== */
+
+
+/* --------------------------------------------------
+   Tablet
+-------------------------------------------------- */
+
+@media (max-width: 900px) {
+
+    .profile-container {
+        width: 94%;
+
+        margin: 35px auto;
+    }
+
+
+    .profile-card {
+        padding: 25px;
+    }
+
+
+    .messages-section {
+        padding: 22px;
+    }
+
+
+    .message-column {
+        max-width: 250px;
+    }
+
+}
+
+
+/* --------------------------------------------------
+   Mobile
+-------------------------------------------------- */
+
+@media (max-width: 650px) {
+
+    .profile-container {
+        width: 94%;
+
+        margin: 25px auto;
+    }
+
+
+    /* Profile Card */
+
+    .profile-card {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        padding: 25px 18px;
+    }
+
+
+    .profile-avatar {
+        width: 75px;
+        height: 75px;
+
+        min-width: 75px;
+
+        font-size: 30px;
+    }
+
+
+    .profile-info h1 {
+        font-size: 22px;
+    }
+
+
+    .profile-info p {
+        font-size: 14px;
+    }
+
+
+    /* Messages */
+
+    .messages-section {
+        padding: 18px 12px;
+
+        border-radius: 12px;
+    }
+
+
+    .section-header h2 {
+        font-size: 21px;
+    }
+
+
+    .section-header p {
+        font-size: 13px;
+    }
+
+
+    /* Table */
+
+    .table-container {
+        overflow-x: visible;
+    }
+
+
+    .messages-table {
+        min-width: 0;
+    }
+
+
+    .messages-table thead {
+        display: none;
+    }
+
+
+    .messages-table,
+    .messages-table tbody,
+    .messages-table tr,
+    .messages-table td {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    .messages-table tr {
+        margin-bottom: 20px;
+
+        padding: 15px;
+
+        background: #ffffff;
+
+        border: 1px solid #eeeeee;
+
+        border-radius: 10px;
+
+        box-shadow:
+            0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+
+    .messages-table td {
+        display: flex;
+
+        justify-content: space-between;
+
+        gap: 15px;
+
+        padding: 10px 5px;
+
+        border-bottom: 1px solid #eeeeee;
+
+        text-align: right;
+    }
+
+
+    .messages-table td:last-child {
+        border-bottom: none;
+    }
+
+
+    .messages-table td::before {
+        content: attr(data-label);
+
+        flex-shrink: 0;
+
+        font-weight: 700;
+
+        color: #333333;
+
+        text-align: left;
+    }
+
+
+    .message-column {
+        max-width: none;
+
+        display: block !important;
+
+        text-align: left !important;
+    }
+
+
+    .message-column::before {
+        display: block;
+
+        margin-bottom: 7px;
+    }
+
+
+    .reply-column {
+        display: block !important;
+
+        text-align: left !important;
+    }
+
+
+    .reply-column::before {
+        display: block;
+
+        margin-bottom: 8px;
+    }
+
+
+    .reply-box {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+
+    .no-messages {
+        display: block !important;
+
+        border: none !important;
+
+        padding: 0 !important;
+    }
+
+
+    .empty-state {
+        padding: 40px 15px;
+    }
+
+}
+
+
+/* --------------------------------------------------
+   Small Mobile
+-------------------------------------------------- */
+
+@media (max-width: 400px) {
+
+    .profile-info h1 {
+        font-size: 20px;
+    }
+
+
+    .profile-card {
+        padding: 20px 12px;
+    }
+
+
+    .messages-section {
+        padding: 15px 10px;
+    }
+
+
+    .reply-btn {
+        padding: 8px 12px;
+
+        font-size: 12px;
+    }
+
+}
