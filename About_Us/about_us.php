@@ -28,7 +28,7 @@
 
             <div class="team">
                 <div class="team-member">
-                    <img src="../assets/images/about_us/4.jpg" alt="Sojib's Picture">
+                    <img src="../assets/images/about_us/sojib.jpeg" alt="Sojib's Picture">
                     <h3>Md. Shajalal</h3>
 
                     <p>Full-stack Developer</p>
