@@ -47,8 +47,48 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2024 Agriculture Information Service. All rights reserved.</p>
+        <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>Agriculture Information Service</h3>
+                <p>
+                    Providing useful agricultural information, farming tips,
+                    and resources for farmers and agriculture enthusiasts.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <a href="index.php">Home</a>
+                <a href="about.php">About</a>
+                <a href="contact.php">Contact</a>
+            </div>
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+
+                <a href="https://www.facebook.com/share/194z9YXrfs/" target="_blank">
+                    <i class="fab fa-facebook"></i> Facebook
+                </a>
+
+                <a href="https://github.com/MdShajalalsojib" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+
+                <a href="mdshahjalalsojib@gmail.com">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                &copy; 2026 Agriculture Information Service. All rights reserved.
+            </p>
+            <p>
+                Developed with ❤️ by <strong>Md. Shajalal</strong>
+            </p>
+        </div>
     </footer>
 </body>
 </html>
